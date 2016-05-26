@@ -12,7 +12,6 @@ LOG_BASE = 2.718281828459045
 CORPUS_FILE = '../dictionary/corpus'        #Chinese corpus
 CORPUS_FILE2 = '../dictionary/corpus2'      #English corpus
 
-
 class tf_idf:
     def __init__(self):
         with open(CORPUS_FILE, 'r', encoding='utf-8') as f:
