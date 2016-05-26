@@ -16,12 +16,12 @@ CORPUS_FILE2 = '../dictionary/corpus2'      #English corpus
 class tf_idf:
     def __init__(self):
         with open(CORPUS_FILE, 'r', encoding='utf-8') as f:
-            corpus = f.read().split('\n')
-        self.corpus = corpus
+            corpus_ZH = f.read().split('\n')
+        self.corpus_ZH = corpus_ZH
 
         with open(CORPUS_FILE2, 'r', encoding='utf-8') as f:
-            corpus2 = f.read().split('\n')
-        self.corpus2 = corpus2
+            corpus_EN = f.read().split('\n')
+        self.corpus_EN = corpus_EN
 
     def tf(self, term, doc_list):
         '''
@@ -39,10 +39,10 @@ class tf_idf:
         :return:IDF value
         '''
         if LANG == 'en':
-            corpus = self.corpus2
+            corpus = self.corpus_EN
             num = len([True for text in corpus if term.lower() in text.lower().split()])
         else:
-            corpus = self.corpus
+            corpus = self.corpus_ZH
             num = len([True for text in corpus if text.find(term) > -1])
 
         try:
