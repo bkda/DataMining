@@ -1,3 +1,4 @@
+# coding=UTF-8
 '''
     Created by Tracy on 2016/5/3
     Mail tracyliubai@gmail.com
