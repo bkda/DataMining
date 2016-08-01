@@ -4,7 +4,7 @@
     Created by Tracy on 2016/7/30
     Mail tracyliubai@gmail.com
 '''
-from Algorithm.ksp import k_shortest_paths
+from Algorithm.k_shortest_paths import k_shortest_paths
 weightedEdge = [
     ['C', 'D', 3],
     ['C', 'E', 2],
