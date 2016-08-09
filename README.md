@@ -26,7 +26,8 @@ Nodes correspond to items and have a counter
 - Fixed order is used, so paths can overlap when transactions share items (when they have the same prfix ).In this case, counters are incremented
 - Pointers are maintained between nodes containing the same item, creating singly linked lists (dotted lines) The more paths that overlap, the higher the compression. FP-tree may fit in memory.
 - Frequent itemsets extracted from the FP-Tree.
-![](IMG/2.png)
+  
+![](IMG/2.png)  
 
 #### Advantages of FP-Growth
 
@@ -41,7 +42,8 @@ Nodes correspond to items and have a counter
 - FP-Tree is expensive to build
 
 
-### Comparison 
+### Comparison   
+
 ![](IMG/3.png)
 
 ##KSP (k shortest paths)
@@ -51,7 +53,8 @@ edge weights, a positive integer k, and two vertices s and t, the problem asks f
 
 We require that the paths be simple (loop free). See Figure 1 for an example illustrating the difference between the k shortest paths problem with and without the simplicity constraint. (As the figure shows, even in graphs with non-negative weights, although the shortest path is always simple, the subsequent paths can have cycles.) The k shortest paths problem in which paths are not required to be simple turns out to be significantly easier. An O(m + kn log n) time algorithm for this problem has been known since 1975; a recent improvement by Eppstein essentially achieves the optimal time of O(m + n log n + k)—the algorithm computes an implicit representation of the paths, from which each path can be output in O(n) additional time.
 
-![](IMG/figure1.png)
+![](IMG/figure1.png)  
+
 Figure 1: The difference between simple and nonsimple k shortest paths. The three simple shortest paths have lengths 6; 20 and 21, respectively. Without the simplicity constraint, paths may use the cycles (a; b; a) and (d; e; d), giving shortest paths of lengths 6; 8; 10.
 
 The problem of determining the k shortest simple paths has proved to be more challenging. The problem was originally examined by Hoffman and Pavley ,but nearly all early attempts to solve it led to exponential time algorithms . The best result known to date is an algorithm by Yen  (generalized by Lawler ), which using modern data structures can be implemented in O(kn(m+n log n)) worstcase time. This algorithm essentially performs O(n) single-source shortest path computations for each output path. In the case of undirected graphs, Katoh,Ibaraki, and Mine improve Yen’s algorithm to O(k(m+n log n)) time. While Yen’s asymptotic worstcase bound for enumerating k simple shortest paths in a directed graph remains unbeaten, several heuristic improvements to his algorithm have been proposed and implemented, as have other algorithms with the same
@@ -69,15 +72,18 @@ Variations of the tf–idf weighting scheme are often used by search engines as 
 One of the simplest ranking functions is computed by summing the tf–idf for each query term; many more sophisticated ranking functions are variants of this simple model.
 
 ![](IMG/tf.png)
+
 ##Viterbi
 The Viterbi algorithm is a dynamic programming algorithm for finding the most likely sequence of hidden states – called the Viterbi path – that results in a sequence of observed events, especially in the context of Markov information sources and hidden Markov models.
 
 The algorithm has found universal application in decoding the convolutional codes used in both CDMA and GSM digital cellular, dial-up modems, satellite, deep-space communications, and 802.11 wireless LANs. It is now also commonly used in speech recognition, speech synthesis, diarization, keyword spotting, computational linguistics, and bioinformatics. For example, in speech-to-text (speech recognition), the acoustic signal is treated as the observed sequence of events, and a string of text is considered to be the "hidden cause" of the acoustic signal. The Viterbi algorithm finds the most likely string of text given the acoustic signal.
 
-e.g.
+e.g.  
+
 ![](IMG/7.png)
 
 ##Cosin Similarity 
+
 Cosine similarity is a measure of similarity between two non zero vectors of an inner product space that measures the cosine of the angle between them. The cosine of 0° is 1, and it is less than 1 for any other angle. It is thus a judgment of orientation and not magnitude: two vectors with the same orientation have a cosine similarity of 1, two vectors at 90° have a similarity of 0, and two vectors diametrically opposed have a similarity of -1, independent of their magnitude. Cosine similarity is particularly used in positive space, where the outcome is neatly bounded in.
 
 Note that these bounds apply for any number of dimensions, and cosine similarity is most commonly used in high-dimensional positive spaces. For example, in information retrieval and text mining, each term is notionally assigned a different dimension and a document is characterised by a vector where the value of each dimension corresponds to the number of times that term appears in the document. Cosine similarity then gives a useful measure of how similar two documents are likely to be in terms of their subject matter.
@@ -89,5 +95,5 @@ Cosine distance is a term often used for the complement in positive space, that 
 One of the reasons for the popularity of cosine similarity is that it is very efficient to evaluate, especially for sparse vectors, as only the non-zero dimensions need to be considered.
 
 Given two vectors of attributes, A and B, the cosine similarity, cos(θ), is represented using a dot product and magnitude as
-![](IMG/6.png)
+![](IMG/6.png)  
  where Ai and Bi are components of vector A and B respectively.
