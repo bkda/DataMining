@@ -4,7 +4,8 @@
 ##[Apriori](https://en.wikipedia.org/wiki/Apriori_algorithm)
 Apriori is an algorithm for frequent item set mining and association rule learning over transactional databases. It proceeds by identifying the frequent individual items in the database and extending them to larger and larger item sets as long as those item sets appear sufficiently often in the database. The frequent item sets determined by Apriori can be used to determine association rules which highlight general trends in the database: this has applications in domains such as market basket analysis.
 
-![](IMG/1.png)
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/1.png" width="634" height="285">
+
 
 #### Limitations
 Apriori algorithm can be slow and candidate generation is the bottleneck.
@@ -27,7 +28,7 @@ Nodes correspond to items and have a counter
 - Pointers are maintained between nodes containing the same item, creating singly linked lists (dotted lines) The more paths that overlap, the higher the compression. FP-tree may fit in memory.
 - Frequent itemsets extracted from the FP-Tree.
   
-![](IMG/2.png)  
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/2.png" width="578" height="454">
 
 #### Advantages of FP-Growth
 
@@ -44,7 +45,7 @@ Nodes correspond to items and have a counter
 
 ### Comparison   
 
-![](IMG/3.png)
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/3.png" width="441" height="323">
 
 ##KSP (k shortest paths)
 
@@ -53,7 +54,7 @@ edge weights, a positive integer k, and two vertices s and t, the problem asks f
 
 We require that the paths be simple (loop free). See Figure 1 for an example illustrating the difference between the k shortest paths problem with and without the simplicity constraint. (As the figure shows, even in graphs with non-negative weights, although the shortest path is always simple, the subsequent paths can have cycles.) The k shortest paths problem in which paths are not required to be simple turns out to be significantly easier. An O(m + kn log n) time algorithm for this problem has been known since 1975; a recent improvement by Eppstein essentially achieves the optimal time of O(m + n log n + k)—the algorithm computes an implicit representation of the paths, from which each path can be output in O(n) additional time.
 
-![](IMG/figure1.png)  
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/figure1.png" width="584" height="334">
 
 Figure 1: The difference between simple and nonsimple k shortest paths. The three simple shortest paths have lengths 6; 20 and 21, respectively. Without the simplicity constraint, paths may use the cycles (a; b; a) and (d; e; d), giving shortest paths of lengths 6; 8; 10.
 
@@ -61,7 +62,7 @@ The problem of determining the k shortest simple paths has proved to be more cha
 worst-case bound.
 
 
-![](IMG/5.png)
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/5.png" width="550" height="564">
 
 ##TF-IDF
 
@@ -71,7 +72,7 @@ Variations of the tf–idf weighting scheme are often used by search engines as 
 
 One of the simplest ranking functions is computed by summing the tf–idf for each query term; many more sophisticated ranking functions are variants of this simple model.
 
-![](IMG/tf.png)
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/tf.png" width="551" height="213">
 
 ##Viterbi
 The Viterbi algorithm is a dynamic programming algorithm for finding the most likely sequence of hidden states – called the Viterbi path – that results in a sequence of observed events, especially in the context of Markov information sources and hidden Markov models.
@@ -80,7 +81,7 @@ The algorithm has found universal application in decoding the convolutional code
 
 e.g.  
 
-![](IMG/7.png)
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/7.png" width="700" height="700">
 
 ##Cosin Similarity 
 
@@ -94,6 +95,24 @@ Cosine distance is a term often used for the complement in positive space, that 
 
 One of the reasons for the popularity of cosine similarity is that it is very efficient to evaluate, especially for sparse vectors, as only the non-zero dimensions need to be considered.
 
-Given two vectors of attributes, A and B, the cosine similarity, cos(θ), is represented using a dot product and magnitude as
-![](IMG/6.png)  
+Given two vectors of attributes, A and B, the cosine similarity, cos(θ), is represented using a dot product and magnitude as  
+
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/6.png" width="387" height="114">  
+ 
  where Ai and Bi are components of vector A and B respectively.
+ 
+ 
+## hamming distance
+
+In information theory, the Hamming distance between two strings of equal length is the number of positions at which the corresponding symbols are different. In another way, it measures the minimum number of substitutions required to change one string into the other, or the minimum number of errors that could have transformed one string into the other.
+
+A major application is in coding theory, more specifically to block codes, in which the equal-length strings are vectors over a finite field.
+
+The Hamming distance between:
+
+    "karolin" and "kathrin" is 3.
+    "karolin" and "kerstin" is 3.
+    1011101 and 1001001 is 2.
+    2173896 and 2233796 is 3.
+
+
