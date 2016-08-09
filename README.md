@@ -4,7 +4,7 @@
 ##[Apriori](https://en.wikipedia.org/wiki/Apriori_algorithm)
 Apriori is an algorithm for frequent item set mining and association rule learning over transactional databases. It proceeds by identifying the frequent individual items in the database and extending them to larger and larger item sets as long as those item sets appear sufficiently often in the database. The frequent item sets determined by Apriori can be used to determine association rules which highlight general trends in the database: this has applications in domains such as market basket analysis.
 
- <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/1.png" width="634" height="285">
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/1.png" width="550">
 
 
 #### Limitations
@@ -28,7 +28,7 @@ Nodes correspond to items and have a counter
 - Pointers are maintained between nodes containing the same item, creating singly linked lists (dotted lines) The more paths that overlap, the higher the compression. FP-tree may fit in memory.
 - Frequent itemsets extracted from the FP-Tree.
   
- <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/2.png" width="578" height="454">
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/2.png" width="500">
 
 #### Advantages of FP-Growth
 
