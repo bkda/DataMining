@@ -66,11 +66,11 @@ r=fp_growth(transactions,4)
 - FP-Tree is expensive to build
 
 
-### Comparison   
+#### Comparison   
 
  <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/3.png" width="400">
 
-##KSP (k shortest paths)
+##[KSP (k shortest paths)](https://en.wikipedia.org/wiki/K_shortest_path_routing)
 
 The k shortest paths problem is a natural and longstudied generalization of the shortest path problem, in which not one but several paths in increasing order of length are sought. Given a directed graph G with nonnegative
 edge weights, a positive integer k, and two vertices s and t, the problem asks for the k shortest paths from s to t in increasing order of length.
@@ -101,7 +101,7 @@ paths, costs = k_shortest_paths(weightedEdge2, 0, 8, 8)
        14   [0, 2, 5, 8]
        14   [0, 3, 6, 8]
 
-##TF-IDF
+##[TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf)
 
 In information retrieval, tf–idf, short for term frequency–inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. It is often used as a weighting factor in information retrieval and text mining. The tf-idf value increases proportionally to the number of times a word appears in the document, but is offset by the frequency of the word in the corpus, which helps to adjust for the fact that some words appear more frequently in general.
 
@@ -111,7 +111,7 @@ One of the simplest ranking functions is computed by summing the tf–idf for ea
 
  <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/tf.png" width="510">
 
-##Viterbi
+##[Viterbi](https://en.wikipedia.org/wiki/Viterbi_algorithm)
 The Viterbi algorithm is a dynamic programming algorithm for finding the most likely sequence of hidden states – called the Viterbi path – that results in a sequence of observed events, especially in the context of Markov information sources and hidden Markov models.
 
 The algorithm has found universal application in decoding the convolutional codes used in both CDMA and GSM digital cellular, dial-up modems, satellite, deep-space communications, and 802.11 wireless LANs. It is now also commonly used in speech recognition, speech synthesis, diarization, keyword spotting, computational linguistics, and bioinformatics. For example, in speech-to-text (speech recognition), the acoustic signal is treated as the observed sequence of events, and a string of text is considered to be the "hidden cause" of the acoustic signal. The Viterbi algorithm finds the most likely string of text given the acoustic signal.
@@ -131,7 +131,7 @@ Healthy | 0.3 | 0.084 | 0.00588
     Sequence:
     0.01512, ['Healthy', 'Healthy', 'Fever']
 
-##Cosin Similarity 
+##[Cosin Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)
 
 Cosine similarity is a measure of similarity between two non zero vectors of an inner product space that measures the cosine of the angle between them. The cosine of 0° is 1, and it is less than 1 for any other angle. It is thus a judgment of orientation and not magnitude: two vectors with the same orientation have a cosine similarity of 1, two vectors at 90° have a similarity of 0, and two vectors diametrically opposed have a similarity of -1, independent of their magnitude. Cosine similarity is particularly used in positive space, where the outcome is neatly bounded in.
 
@@ -150,7 +150,7 @@ Given two vectors of attributes, A and B, the cosine similarity, cos(θ), is rep
  where Ai and Bi are components of vector A and B respectively.
  
  
-## hamming distance
+## [Hamming distance](https://en.wikipedia.org/wiki/Hamming_distance)
 
 In information theory, the Hamming distance between two strings of equal length is the number of positions at which the corresponding symbols are different. In another way, it measures the minimum number of substitutions required to change one string into the other, or the minimum number of errors that could have transformed one string into the other.
 
