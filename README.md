@@ -6,6 +6,16 @@ Apriori is an algorithm for frequent item set mining and association rule learni
 
  <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/1.png" width="550">
 
+####Run
+apriori(transactions, 3)
+
+    (1, 2) 5
+    (1, 3) 4
+    (2, 3) 5
+    (3, 4) 3
+    (2, 4) 3
+    (1, 4) 4
+    (1, 2, 3) 3
 
 #### Limitations
 Apriori algorithm can be slow and candidate generation is the bottleneck.
@@ -30,6 +40,19 @@ Nodes correspond to items and have a counter
   
  <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/2.png" width="500">
 
+####Run
+r=fp_growth(transactions,4)
+
+    [1]        8         
+    [2]        7         
+    [3]        6         
+    [1, 2]     5         
+    [2, 3]     5         
+    [4]        5         
+    [1, 3]     4         
+    [1, 4]     4 
+
+
 #### Advantages of FP-Growth
 
 - only 2 passes over data-set
@@ -45,7 +68,7 @@ Nodes correspond to items and have a counter
 
 ### Comparison   
 
- <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/3.png" width="441" height="323">
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/3.png" width="400">
 
 ##KSP (k shortest paths)
 
@@ -54,7 +77,7 @@ edge weights, a positive integer k, and two vertices s and t, the problem asks f
 
 We require that the paths be simple (loop free). See Figure 1 for an example illustrating the difference between the k shortest paths problem with and without the simplicity constraint. (As the figure shows, even in graphs with non-negative weights, although the shortest path is always simple, the subsequent paths can have cycles.) The k shortest paths problem in which paths are not required to be simple turns out to be significantly easier. An O(m + kn log n) time algorithm for this problem has been known since 1975; a recent improvement by Eppstein essentially achieves the optimal time of O(m + n log n + k)—the algorithm computes an implicit representation of the paths, from which each path can be output in O(n) additional time.
 
- <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/figure1.png" width="584" height="334">
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/figure1.png" width="530">
 
 Figure 1: The difference between simple and nonsimple k shortest paths. The three simple shortest paths have lengths 6; 20 and 21, respectively. Without the simplicity constraint, paths may use the cycles (a; b; a) and (d; e; d), giving shortest paths of lengths 6; 8; 10.
 
@@ -62,7 +85,21 @@ The problem of determining the k shortest simple paths has proved to be more cha
 worst-case bound.
 
 
- <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/5.png" width="550" height="564">
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/5.png" width="530">
+
+
+####Run
+
+paths, costs = k_shortest_paths(weightedEdge2, 0, 8, 8)
+
+        8   [0, 3, 2, 1, 5, 8]
+       10   [0, 3, 6, 5, 8]
+       11   [0, 2, 1, 5, 8]
+       11   [0, 3, 2, 5, 8]
+       12   [0, 1, 5, 8]
+       12   [0, 3, 5, 8]
+       14   [0, 2, 5, 8]
+       14   [0, 3, 6, 8]
 
 ##TF-IDF
 
@@ -72,7 +109,7 @@ Variations of the tf–idf weighting scheme are often used by search engines as 
 
 One of the simplest ranking functions is computed by summing the tf–idf for each query term; many more sophisticated ranking functions are variants of this simple model.
 
- <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/tf.png" width="551" height="213">
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/tf.png" width="510">
 
 ##Viterbi
 The Viterbi algorithm is a dynamic programming algorithm for finding the most likely sequence of hidden states – called the Viterbi path – that results in a sequence of observed events, especially in the context of Markov information sources and hidden Markov models.
@@ -81,7 +118,18 @@ The algorithm has found universal application in decoding the convolutional code
 
 e.g.  
 
- <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/7.png" width="700" height="700">
+ <img src="https://raw.githubusercontent.com/TracyDa/DataMining/master/IMG/7.png" width="600">  
+   
+####Run   
+print(viterbi(observations, states, start_probability, transition_probability, emission_probability))
+    
+0    | 1    |  2  |    3   
+----|------|----|----
+Fever | 0.04 | 0.027 | 0.01512
+Healthy | 0.3 | 0.084 | 0.00588
+
+    Sequence:
+    0.01512, ['Healthy', 'Healthy', 'Fever']
 
 ##Cosin Similarity 
 
